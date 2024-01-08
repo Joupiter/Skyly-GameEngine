@@ -1,8 +1,6 @@
 package fr.joupi.api.game.host;
 
 import fr.joupi.api.game.Game;
-import fr.joupi.api.gui.GGui;
-import fr.joupi.api.gui.GuiManager;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;
@@ -22,7 +20,6 @@ public class GameHost<G extends Game<?, ?, ?>> {
     private UUID hostUuid;
     private GameHostState hostState;
 
-    private GGui<?> hostGui;
     private ItemStack hostItem;
 
     private final List<UUID> coHost;
@@ -36,10 +33,6 @@ public class GameHost<G extends Game<?, ?, ?>> {
 
     public Player getHostPlayer() {
         return Bukkit.getPlayer(getHostUuid());
-    }
-
-    public void openGui(GuiManager guiManager, Player player) {
-        guiManager.open(player, getHostGui());
     }
 
     public void giveHostItem(int slot) {

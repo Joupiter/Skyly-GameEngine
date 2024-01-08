@@ -1,6 +1,6 @@
 package fr.joupi.api.game;
 
-import fr.joupi.api.threading.MultiThreading;
+import fr.joupi.api.MultiThreading;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
